@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .task-item.completed .task-text {
+            text-decoration: line-through;
+            color: #9ca3af; 
+        }
+    </style>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 min-h-screen flex flex-col items-center py-8 px-4 sm:px-6 lg:px-8">
+
+    <div class="w-full max-w-2xl bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 sm:p-8">
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-center text-blue-700 dark:text-blue-400 mb-6">
+             ABT TO-DO List
+        </h1>
+        <p class="text-center text-sm text-gray-600 dark:text-gray-400 mb-6">
+            Add your daily task here.
+        </p>
+
+        <form id="task-form" class="flex flex-col sm:flex-row gap-3 mb-8">
+            <input
+                type="text"
+                id="task-input"
+                placeholder="Add new Task..."
+                class="flex-grow p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-gray-100"
+            />
+            <button
+            
+                class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors"
+            >
+                Add Task
+            </button>
+        </form>
+
+        <ul id="task-list" class="space-y-4">
+            <p class="text-center text-gray-500 dark:text-gray-400 hidden text-lg" id="no-tasks-message">
+                No task added, Add a new one!
+            </p>
+
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
