@@ -58,7 +58,7 @@ task_list.innerHTML = "";
   let newTask = document.createElement("li");
 newTask.className = "task-item border rounded-lg py-2 pl-3 flex justify-between text-lg my-2 bg-gray-900" ;
 newTask.innerHTML =`
- <span class="task-text">${task}</span>
+ <span class="task-text text-white">${task}</span>
 <button class="delete-btn text-red-400 hover:bg-red-700 hover:text-white rounded px-2 text-lg border border-red-500 mr-4">x</button>
 `;
 newTask.dataset.index = index;
